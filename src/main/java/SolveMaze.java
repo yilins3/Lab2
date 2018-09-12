@@ -20,7 +20,7 @@ public class SolveMaze {
         /*
          * Create a new 10 x 10 maze. Feel free to change these values.
          */
-        Maze maze = new Maze(4, 4);
+        Maze maze = new Maze(10, 10);
 
         /*
          * Pick (0, 0), the bottom left corner, as the starting point.
@@ -42,6 +42,7 @@ public class SolveMaze {
             // Implement your maze solving algorithm here
             while (!maze.isFinished()) {
                 maze.turnRight();
+                System.out.println(maze);
                 if (maze.canMove()) {
                     maze.move();
                 } else {
